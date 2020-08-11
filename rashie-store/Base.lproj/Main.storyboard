@@ -21,11 +21,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-L5-iBz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-L5-iBz">
                                 <rect key="frame" x="0.0" y="155" width="414" height="707"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="wL3-mG-36b" customClass="CategoryCell" customModule="rashie_store" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="150" id="wL3-mG-36b" customClass="CategoryCell" customModule="rashie_store" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wL3-mG-36b" id="kZd-Ss-bpN">
@@ -33,7 +33,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="n3k-GW-GB4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                    <rect key="frame" x="0.0" y="3" width="414" height="144"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="1YG-un-WEU"/>
+                                                        <constraint firstAttribute="width" constant="414" id="ZGa-r9-17o"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RASHGUARDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKV-MW-vot">
                                                     <rect key="frame" x="138" y="61" width="138" height="28"/>
@@ -43,12 +47,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="n3k-GW-GB4" firstAttribute="leading" secondItem="kZd-Ss-bpN" secondAttribute="leading" id="83P-c4-nRT"/>
                                                 <constraint firstItem="CKV-MW-vot" firstAttribute="centerX" secondItem="kZd-Ss-bpN" secondAttribute="centerX" id="9FD-Iu-H08"/>
-                                                <constraint firstItem="n3k-GW-GB4" firstAttribute="leading" secondItem="kZd-Ss-bpN" secondAttribute="leading" id="Gsc-o1-N8X"/>
-                                                <constraint firstAttribute="bottom" secondItem="n3k-GW-GB4" secondAttribute="bottom" id="J4Q-hd-yFH"/>
                                                 <constraint firstItem="CKV-MW-vot" firstAttribute="centerY" secondItem="kZd-Ss-bpN" secondAttribute="centerY" id="OCR-FO-32X"/>
-                                                <constraint firstItem="n3k-GW-GB4" firstAttribute="top" secondItem="kZd-Ss-bpN" secondAttribute="top" id="fhf-L8-832"/>
-                                                <constraint firstAttribute="trailing" secondItem="n3k-GW-GB4" secondAttribute="trailing" id="oxZ-Px-8nm"/>
+                                                <constraint firstAttribute="bottom" secondItem="n3k-GW-GB4" secondAttribute="bottom" constant="3" id="idm-ec-1F2"/>
+                                                <constraint firstAttribute="trailing" secondItem="n3k-GW-GB4" secondAttribute="trailing" id="lKg-gs-2Z9"/>
+                                                <constraint firstItem="n3k-GW-GB4" firstAttribute="top" secondItem="kZd-Ss-bpN" secondAttribute="top" constant="3" id="pw0-8Y-w2Y"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
